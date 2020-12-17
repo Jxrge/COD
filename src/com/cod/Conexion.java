@@ -4,11 +4,11 @@ public class Conexion {
     String Correo = "";
     String ip = "127.0.0.2";
 
-    Singleton() {
+    Conexion() {
         Correo = "anonymous@danielcastelao.org";
     }
 
-    Singleton(String Correo2) {
+    Conexion(String Correo2) {
         this.Correo = Correo2;
     }
 

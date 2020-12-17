@@ -16,7 +16,7 @@ public class Main {
         }
 
         public static boolean metodo1(String comando) {
-            Conexion Direccion = new Conexion(comando);
+            Conexion Direccion = new Conexion (comando);
             System.out.println("Conectando a " + Direccion.ip + ", con el usuario " + comando);
             return Direccion.con();
         }
