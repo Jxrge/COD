@@ -1,23 +1,35 @@
 package com.cod;
 
 public class Conexion {
-    String Correo = "";
+    //Nesta clase tamén están os formatos main aplicados
+    public static String direccion = "";
     String ip = "127.0.0.2";
 
-    Conexion() {
-        Correo = "anonymous@danielcastelao.org";
+    private static Conexion instance = null;
+
+    public static  Conexion getInstance(){
+        if (instance == null){
+            instance = new Conexion();
+        }
+        direccion = "anonymous@danielcastelao.org";
+        return instance;
+    }
+    public static  Conexion getInstance(String direcc){
+        if (instance == null){
+            instance = new Conexion();
+        }
+        direccion = direcc;
+        return instance;
     }
 
-    Conexion(String Correo2) {
-        this.Correo = Correo2;
-    }
-
-    public boolean con() {
-        if (Correo!= "anonymous@danielcastelao.org") {
+    public boolean diferenciar() {
+        if (direccion != "anonymous@danielcastelao.org") {
             return true;
         } else {
-            return false;
+            return false ;
         }
     }
 }
+
+
 
